@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_selector"
+    android:orientation="vertical"
+    android:padding="2dp">
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:padding="3dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tlMain"
+        android:layout_marginRight="26.5dp">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Identificación: "
+                android:textColor="#000" />
+            <TextView
+                android:id="@+id/lr_identificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Identificación"
+                android:textColor="#0000dd"
+                android:textSize="15dip"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Peso: "
+                android:textColor="#000" />
+            <TextView
+                android:id="@+id/lr_peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Peso"
+                android:textColor="#0000dd"
+                android:textSize="15dp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableRow1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Masa Corporal: "
+                android:textColor="#000" />
+            <TextView
+                android:id="@+id/lr_masacorporal"
+                android:layout_width="189.0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Masa Corporal"
+                android:textColor="#0000dd"
+                android:textSize="15dp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Altura: "
+                android:textColor="#000" />
+            <TextView
+                android:id="@+id/lr_altura"
+                android:layout_width="189.0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Altura"
+                android:textColor="#0000dd"
+                android:textSize="15dp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Presión Arterial: "
+                android:textColor="#000" />
+            <TextView
+                android:id="@+id/lr_presionarterial"
+                android:layout_width="189.0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Presión Arterial"
+                android:textColor="#0000dd"
+                android:textSize="15dp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Frecuencia Cardiaca: "
+                android:textColor="#000" />
+            <TextView
+                android:id="@+id/lr_frecuenciacardiaca"
+                android:layout_width="189.0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Frecuencia Cardiaca"
+                android:textColor="#0000dd"
+                android:textSize="15dp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="Detalle: "
+                android:textColor="#000" />
+            <TextView
+                android:id="@+id/lr_detalle"
+                android:layout_width="189.0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Detalle"
+                android:textColor="#0000dd"
+                android:textSize="15dp" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="100dip"
+        android:padding="3dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tlBtns"
+        android:layout_alignParentRight="true">
+        <ImageView
+            android:id="@+id/lr_deleteBtn"
+            android:layout_width="47.5dp"
+            android:layout_height="50dip"
+            android:src="@drawable/delete"
+            android:clickable="true" />
+    </TableLayout>
+</RelativeLayout>

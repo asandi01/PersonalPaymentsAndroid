@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingBottom="@dimen/activity_vertical_margin"
+      android:paddingLeft="@dimen/activity_horizontal_margin"
+      android:paddingRight="@dimen/activity_horizontal_margin"
+      android:paddingTop="@dimen/activity_vertical_margin"
+      android:scrollbars="none">
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+      <TableRow
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:visibility="invisible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id "
+            android:visibility="invisible" />
+        <EditText
+            android:id="@+id/etid"
+            style="@style/input_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:editable="false"
+            android:hint="Id"
+            android:visibility="invisible" />
+        <EditText
+            android:id="@+id/etidPersona"
+            style="@style/input_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:editable="false"
+            android:hint="Id"
+            android:visibility="invisible" />
+      </TableRow>
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Identificación" />
+        <EditText
+            android:id="@+id/etidentificacion"
+            style="@style/input_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etid"
+            android:layout_weight="1"
+            android:editable="false"
+            android:hint="Identificación" />
+      </TableRow>
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peso" />
+        <EditText
+            android:id="@+id/etpeso"
+            style="@style/input_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etid"
+            android:layout_weight="1"
+            android:hint="Peso"
+            android:numeric="decimal" />
+      </TableRow>
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Altura" />
+        <EditText
+            android:id="@+id/etaltura"
+            style="@style/input_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etapellidos"
+            android:layout_weight="1"
+            android:hint="Altura"
+            android:numeric="decimal" />
+      </TableRow>
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presión Arterial" />
+        <EditText
+            android:id="@+id/etpresionarterial"
+            style="@style/input_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etapellidos"
+            android:layout_weight="1"
+            android:hint="Presión Arterial" />
+      </TableRow>
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frecuencia Cardiaca" />
+        <EditText
+            android:id="@+id/etfrecuenciacardiaca"
+            style="@style/input_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etcorreo"
+            android:layout_weight="1"
+            android:hint="Frecuencia Cardiaca" />
+      </TableRow>
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalle"
+            android:id="@+id/textView11" />
+        <EditText
+            android:id="@+id/etdetalle"
+            style="@style/input_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ettiposangre"
+            android:layout_weight="1"
+            android:gravity="top|left"
+            android:hint="Detalle"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:scrollHorizontally="false"
+            android:scrollbars="vertical" />
+      </TableRow>
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+        <Button
+            android:id="@+id/btninsertar"
+            style="@style/button_style"
+            android:layout_weight="1"
+            android:text=" Insertar " />
+      </TableRow>
+    </TableLayout>
+  </ScrollView>
+</RelativeLayout>

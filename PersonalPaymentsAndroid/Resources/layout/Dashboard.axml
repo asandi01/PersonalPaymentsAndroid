@@ -4,25 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Desarrollado por: Albin Sandi Gamboa"
+        android:text="Main Menu"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1" />
-    <TextView
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
-    <ImageView
-        android:src="@drawable/icon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/icono" />
     <Button
-        android:text="Ingresar"
-        android:layout_width="match_parent"
+        android:text="Payment Record"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btningresar" />
+        android:id="@+id/btnpayment" />
+    <Button
+        android:text="Income Record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnincome" />
 </LinearLayout>
