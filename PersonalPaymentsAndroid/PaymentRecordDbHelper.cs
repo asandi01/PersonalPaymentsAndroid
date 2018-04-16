@@ -1,30 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Android.Content;  
+using Android.Content;
 using Android.Database;
-                
+
 using System.Xml;
 using System.Net.Http;
+using System.Xml.Serialization;
+using System.Xml.Linq;
+using System.IO;
+using System.Text;
+
+using System.Threading.Tasks;
+using System.Net;
 
 namespace PersonalPaymentsAndroid {
-    class PaymentRecordDbHelper {        
+    class PaymentRecordDbHelper {
+        IList<PaymentRecord> listPayment;
+
+
+        public IList<PaymentRecord> getListPayment() {
+            return listPayment;
+        }
+
 
         //Retrive All Details
-        public IList<PaymentRecord> GetAllPaymentRecord(string idPersonal) {  
-
-            var sServiceURL = $"/PaymentRecord.asmx/Get";
+        public async void GetAllPaymentRecord() {
+            var sServiceURL = "/PaymentRecord.asmx/Get";
+            string api_url = "http://172.22.214.81:8090"+sServiceURL;
 
             using (var client = new HttpClient()) {
                 try {
                     client.BaseAddress=new Uri("http://172.22.214.81:8090");
-                    //var response = await client.GetAsync(sServiceURL);
-                    //response.EnsureSuccessStatusCode();
+                    var response = await client.GetAsync(sServiceURL);
+                    response.EnsureSuccessStatusCode();
 
-                    //var stringResult = await response.Content.ReadAsStringAsync();
+                    var stringResult = response.Content.ReadAsStringAsync();
 
                     XmlDocument doc = new XmlDocument();
-                    //doc.LoadXml(stringResult);
+                    doc.LoadXml(stringResult);
                     doc.RemoveChild(doc.FirstChild);
 
                     XmlDocument exchangeRateData = new XmlDocument();
@@ -32,12 +46,12 @@ namespace PersonalPaymentsAndroid {
 
                     var paymentRecord = new List<PaymentRecord>();
 
-                    foreach (XmlNode node in exchangeRateData.FirstChild.ChildNodes) {                        
+                    foreach (XmlNode node in exchangeRateData.FirstChild.ChildNodes) {
                         paymentRecord.Add(new PaymentRecord() {
-                            id = Int32.Parse(node.ChildNodes[0].InnerText),
+                            id=Int32.Parse(node.ChildNodes[0].InnerText),
                             idUser=Int32.Parse(node.ChildNodes[1].InnerText),
                             detail=node.ChildNodes[2].InnerText,
-                            amount= Double.Parse(node.ChildNodes[3].InnerText),
+                            amount=Double.Parse(node.ChildNodes[3].InnerText),
                             recurrence=Convert.ToBoolean(node.ChildNodes[4].InnerText),
                             recurrenciaTypeId=Int32.Parse(node.ChildNodes[5].InnerText),
                             paymentDate=Convert.ToDateTime(node.ChildNodes[6].InnerText),
@@ -45,12 +59,12 @@ namespace PersonalPaymentsAndroid {
                             expenseCategoryId=Int32.Parse(node.ChildNodes[7].InnerText)
                         });
                     }
-                    return paymentRecord;
+
+                    listPayment=paymentRecord;
 
                 } catch (HttpRequestException httpRequestException) {
-                    return null;
                 }
-            }             
+            }
         }
 
 
@@ -130,7 +144,7 @@ namespace PersonalPaymentsAndroid {
                 }
 
                 cursor.Close();
-            }
-        }  */
+            }   
+        }       */
     }
 }

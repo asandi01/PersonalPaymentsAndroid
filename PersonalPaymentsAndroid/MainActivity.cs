@@ -17,7 +17,7 @@ namespace PersonalPaymentsAndroid {
             btnIngresar.Click+=delegate {
                 var activityPersona = new Intent(this, typeof(Dashboard));
                 StartActivity(activityPersona);
-            };
+            };   
         }
     }
 }

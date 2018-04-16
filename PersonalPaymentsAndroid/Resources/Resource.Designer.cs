@@ -130,8 +130,8 @@ namespace PersonalPaymentsAndroid
 			// aapt resource value: 0x7f07000f
 			public const int btnincome = 2131165199;
 			
-			// aapt resource value: 0x7f070021
-			public const int btningresar = 2131165217;
+			// aapt resource value: 0x7f070020
+			public const int btningresar = 2131165216;
 			
 			// aapt resource value: 0x7f07000c
 			public const int btninsertar = 2131165196;
@@ -172,8 +172,8 @@ namespace PersonalPaymentsAndroid
 			// aapt resource value: 0x7f07000b
 			public const int ettiposangre = 2131165195;
 			
-			// aapt resource value: 0x7f070020
-			public const int icono = 2131165216;
+			// aapt resource value: 0x7f07001f
+			public const int icono = 2131165215;
 			
 			// aapt resource value: 0x7f070011
 			public const int infoMedicaListBtnAdd = 2131165201;
@@ -208,11 +208,11 @@ namespace PersonalPaymentsAndroid
 			// aapt resource value: 0x7f07001a
 			public const int lr_presionarterial = 2131165210;
 			
-			// aapt resource value: 0x7f070022
-			public const int paymentRecordListBtnAdd = 2131165218;
+			// aapt resource value: 0x7f070021
+			public const int paymentRecordListBtnAdd = 2131165217;
 			
-			// aapt resource value: 0x7f070023
-			public const int paymentRecordListListView = 2131165219;
+			// aapt resource value: 0x7f070022
+			public const int paymentRecordListListView = 2131165218;
 			
 			// aapt resource value: 0x7f070010
 			public const int tableLayout = 2131165200;
@@ -225,9 +225,6 @@ namespace PersonalPaymentsAndroid
 			
 			// aapt resource value: 0x7f070009
 			public const int textView11 = 2131165193;
-			
-			// aapt resource value: 0x7f07001f
-			public const int textView2 = 2131165215;
 			
 			// aapt resource value: 0x7f07001d
 			public const int tlBtns = 2131165213;

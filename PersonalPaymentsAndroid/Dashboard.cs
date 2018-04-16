@@ -18,9 +18,16 @@ namespace PersonalPaymentsAndroid {
     
             SetContentView(Resource.Layout.Dashboard);
 
-            Button btnIngresar = FindViewById<Button>(Resource.Id.btningresar);
+            Button btnPayment = FindViewById<Button>(Resource.Id.btnpayment);
 
-            btnIngresar.Click+=delegate {
+            btnPayment.Click+=delegate {
+                var activityPayment = new Intent(this, typeof(PaymentRecordActivity));
+                StartActivity(activityPayment);
+            };
+
+            Button btnIncome = FindViewById<Button>(Resource.Id.btnincome);
+
+            btnIncome.Click+=delegate {
                 var activityPayment = new Intent(this, typeof(PaymentRecordActivity));
                 StartActivity(activityPayment);
             };

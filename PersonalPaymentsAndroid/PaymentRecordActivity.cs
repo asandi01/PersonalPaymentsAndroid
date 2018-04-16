@@ -43,13 +43,15 @@ namespace PersonalPaymentsAndroid {
                 StartActivity(activityAddEdit);
             };
 
-            LoadPaymentRecordInList(personaId);
+            LoadPaymentRecordInList();
 
         }
 
-        private void LoadPaymentRecordInList(string personaId) {
+        private void LoadPaymentRecordInList() {
             PaymentRecordDbHelper dbVals = new PaymentRecordDbHelper();
-            listItsms=dbVals.GetAllPaymentRecord(personaId);
+            dbVals.GetAllPaymentRecord();
+            
+            listItsms=dbVals.getListPayment();
 
             lv.Adapter=new PaymentRecordListBaseAdapter(this, listItsms);
 
